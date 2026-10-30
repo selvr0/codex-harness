@@ -1,0 +1,12 @@
+{
+  "name": "screenshot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "selftest": "bash test/selftest.sh"
+  },
+  "dependencies": {
+    "playwright": "1.64.1"
+  }
+}

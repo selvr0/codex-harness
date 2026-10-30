@@ -1,0 +1,10 @@
+{
+  "name": "일부러 틀린 확인 (실패해야 함)",
+  "baseUrl": "http://127.0.0.1:4174",
+  "steps": [
+    { "goto": "/" },
+    { "fill": ["#answer", "답변"] },
+    { "click": "#submit" },
+    { "expectText": [".result", "이 글자는 나오지 않음"] }
+  ]
+}

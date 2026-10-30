@@ -1,0 +1,17 @@
+{
+  "name": "답변을 입력하고 제출하면 결과가 나타남",
+  "baseUrl": "http://127.0.0.1:4174",
+  "steps": [
+    { "goto": "/" },
+    { "shot": "01-first", "label": "첫 화면", "locate": ["#answer"] },
+    { "click": "#submit" },
+    { "expectText": [".error", "답변을 입력해주세요"] },
+    { "shot": "02-empty", "label": "빈 값으로 제출", "locate": [".error"] },
+    { "fill": ["#answer", "마지막 라운드에서 팀이 끝까지 버틴 순간입니다"] },
+    { "click": "#submit" },
+    { "wait": ".result" },
+    { "expectText": [".result", "제출됨"] },
+    { "expectText": [".result", "끝까지 버틴 순간"] },
+    { "shot": "03-result", "label": "제출 후", "locate": [".result"] }
+  ]
+}
